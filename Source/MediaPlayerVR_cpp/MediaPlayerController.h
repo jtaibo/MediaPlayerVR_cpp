@@ -25,6 +25,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
+
+	UFUNCTION(BlueprintCallable) void jumpForward();
+
 	UPROPERTY(EditAnywhere) UMediaPlayer *_theMediaPlayer;
 	UPROPERTY(EditAnywhere) FString _mediaURL;
 };

@@ -26,3 +26,7 @@ void AMediaPlayerController::Tick(float DeltaTime)
 
 }
 
+void AMediaPlayerController::jumpForward()
+{
+	_theMediaPlayer->Seek(_theMediaPlayer->GetTime() + 10.);
+}
