@@ -28,5 +28,15 @@ void AMediaPlayerController::Tick(float DeltaTime)
 
 void AMediaPlayerController::jumpForward()
 {
-	_theMediaPlayer->Seek(_theMediaPlayer->GetTime() + 10.);
+	_theMediaPlayer->Seek(_theMediaPlayer->GetTime() + _timeStep);
+}
+
+void AMediaPlayerController::jumpBack()
+{
+	_theMediaPlayer->Seek(_theMediaPlayer->GetTime() - _timeStep);
+}
+
+FString AMediaPlayerController::getTimeAsString()
+{
+	return _theMediaPlayer->GetTime().ToString();
 }

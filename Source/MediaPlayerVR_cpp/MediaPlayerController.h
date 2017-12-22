@@ -27,7 +27,13 @@ public:
 public:
 
 	UFUNCTION(BlueprintCallable) void jumpForward();
+	UFUNCTION(BlueprintCallable) void jumpBack();
+
+	UFUNCTION(BlueprintCallable) FString getTimeAsString();
 
 	UPROPERTY(EditAnywhere) UMediaPlayer *_theMediaPlayer;
 	UPROPERTY(EditAnywhere) FString _mediaURL;
+
+	UPROPERTY(EditAnywhere) float _timeStep;
+
 };
